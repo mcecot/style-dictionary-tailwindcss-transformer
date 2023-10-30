@@ -13,6 +13,7 @@ export type SdTailwindConfigType = {
   formatType?: TailwindFormatType
   isVariables?: boolean
   source?: Config['source']
+  parsers?: Config['parsers']
   transforms?: Platform['transforms']
   buildPath?: Platform['buildPath']
   tailwind?: Partial<TailwindOptions>

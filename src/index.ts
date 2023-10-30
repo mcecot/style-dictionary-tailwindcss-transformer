@@ -81,6 +81,7 @@ export const makeSdTailwindConfig = ({
   formatType = 'js',
   isVariables = false,
   source,
+  parsers,
   transforms,
   buildPath,
   tailwind
@@ -95,6 +96,7 @@ export const makeSdTailwindConfig = ({
 
   return {
     source: getConfigValue(source, ['tokens/**/*.json']),
+    parsers,
     format: {
       tailwindFormat: ({ dictionary }: { dictionary: Dictionary }) => {
         return getTailwindFormat({
